@@ -1,25 +1,51 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": ".",
+  "background_color": "black",
+  "description": "Awesome application that will help you know the weather",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "name": "pwa weather app",
+  "orientation": "portrait-primary",
+  "dir":"ltr",
+  "lang":"en-US",
+  "short_name": "weather-app",
+  "id": "/index.html?utm_source=homescreen",
+  "start_url": "/",
+  "scope": ".",
+  "theme_color": "blue",
+  "icons":[
+      {
+          "src": "assets/icons/icon-48x48.png",
+          "type": "image/png",
+          "sizes": "48x48"
+        },
+        {
+          "src": "assets/icons/icon-96x96.png",
+          "type": "image/png",
+          "sizes": "96x96"
+        },
+        {
+          "src": "assets/icons/icon-114x114.png",
+          "type": "image/png",
+          "sizes": "114x114"
+        },
+        {
+          "src": "assets/icons/icon-192x192.png",
+          "type": "image/png",
+          "sizes": "192x192"
+        },
+        {
+          "src": "assets/icons/icon-256x256.png",
+          "type": "image/png",
+          "sizes": "256x256"
+        },
+        {
+          "src": "assets/icons/icon-384x384.png",
+          "type": "image/png",
+          "sizes": "384x384"
+        },
+        {
+          "src": "assets/icons/icon-512x512.png",
+          "type": "image/png",
+          "sizes": "512x512"
+        }
+  ]
 }
