@@ -1,37 +1,58 @@
+
 import {  useState } from "react";
 import { fetchCityWeather } from "./api/fetchApi";
 import "./App.css";
-
-
 function App() {
   const [city, setCity] = useState("");
   const [cityWeather, setCityWeather] = useState(null);
   const [cityData, setCityData] = useState(null);
   const [notFoundCity, setNotFoundCity] = useState(false);
+const [warning, setWarning] = useState("")
+  const getAndSetData=async ()=>{
+if (!city) {
+setWarning("نام شهر را وارد کن");
+setCityData(null); 
+}else{
+  const data = await fetchCityWeather(city);
+  if (data.cod==="404") {
+    setNotFoundCity(true)
+  }else{
+    setCityData(data);    
+    setCityWeather(data.weather[0]);
+    setNotFoundCity(false);
+  }
+  setCity("");
+  setWarning("");
+}
+
+  }
   const getWeather = async (e) => {
     if (e.key === "Enter") {
-      const data = await fetchCityWeather(city);
-      console.log(data);
-      if (data.cod==="404") {
-        setNotFoundCity(true)
-      }else{
-        setCityData(data);    
-        setCityWeather(data.weather[0]);
-        setNotFoundCity(false);
-      }
-      setCity("");
+        getAndSetData()
     }
   };
+  const getWeatherFun= ()=>{
+    getAndSetData()
+  }
   return (
     <div className="main-container">
-        <h1 className="title">behvar-weather-app</h1>
-      <input
+<div className="search_Wrapper">
+<h1 className="title">beh-var-weather-app</h1>
+        <input
         className="search"
-        placeholder="search the city"
+        placeholder="نام شهر..."
         value={city}
         onChange={(e) => setCity(e.target.value)}
         onKeyDown={getWeather}
       ></input>
+    
+      <button 
+      className="submit_button"
+      type="submit"
+      onClick={getWeatherFun}
+      >Go</button>
+</div>
+{warning&&<h1 className="warning">{warning}</h1>}
       {notFoundCity ? <div className="city">
         <h3>شهر مورد نظر پیدا نشد.</h3>
         </div>:<>
