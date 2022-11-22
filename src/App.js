@@ -17,6 +17,7 @@ function App() {
   };
   return (
     <div className="main-container">
+        <h1 className="title">behvar-weather-app</h1>
       <input
         className="search"
         placeholder="search the city"
@@ -26,6 +27,7 @@ function App() {
       ></input>
       {cityData && (
         <div className="city">
+        
           <h2 className="city-name">
             <span>{cityData.name}</span>
             <sup>{cityData.sys.country}</sup>

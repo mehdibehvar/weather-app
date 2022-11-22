@@ -10,7 +10,7 @@
   "id": "/index.html?utm_source=homescreen",
   "start_url": "/",
   "scope": ".",
-  "theme_color": "blue",
+  "theme_color": "yellow",
   "icons":[
       {
           "src": "assets/icons/icon-48x48.png",
@@ -45,7 +45,8 @@
         {
           "src": "assets/icons/icon-512x512.png",
           "type": "image/png",
-          "sizes": "512x512"
+          "sizes": "512x512",
+          "purpose": "maskable"
         }
   ]
 }

@@ -6,7 +6,8 @@ export const fetchCityWeather=async(city)=>{
         params:{
         q:city,
         units:"metric",
-        appid:apikey
+        appid:apikey,
+        lang:"fa"
     }})
     return data;
 }

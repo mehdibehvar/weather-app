@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Rubik;
+  src: url("../public/assets/fonts/Rubik_Microbe/RubikMicrobe-Regular.ttf");
+}
+
 html, body, #root {
   font: 0.9rem sans-serif;
   background: #0a1f44;
@@ -19,7 +24,11 @@ html, body, #root {
   align-items: center;
   flex-direction: column;
 }
-
+.title{
+  color:deeppink;
+  font-family: Rubik;
+  font-weight: 100;
+}
 .search {
   outline: none;
   padding: 20px 7%;
