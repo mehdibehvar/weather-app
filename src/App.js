@@ -74,7 +74,7 @@ setCityData(null);
              />
              <p>{cityWeather.description}</p>
            </div>
-         </div>
+            </div>
          )}
         </>
        
