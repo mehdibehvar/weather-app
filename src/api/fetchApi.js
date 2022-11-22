@@ -8,6 +8,8 @@ export const fetchCityWeather=async(city)=>{
         units:"metric",
         appid:apikey,
         lang:"fa"
-    }})
+    }}).catch((error)=>{
+        return error.response
+    })
     return data;
 }
