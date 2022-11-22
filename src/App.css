@@ -1,6 +1,7 @@
 @font-face {
   font-family: Rubik;
-  src: url("../public/assets/fonts/Rubik_Microbe/RubikMicrobe-Regular.ttf");
+  src: url("../public/assets/fonts/Rubik_Microbe/RubikMicrobe-Regular.ttf") format("ttf");
+  font-style: normal;
 }
 
 html, body, #root {
@@ -100,3 +101,9 @@ p {
       padding: 40px 20%;
   }
 }
+/* ////loader */
+
+
+
+
+    

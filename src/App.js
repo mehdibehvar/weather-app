@@ -1,7 +1,7 @@
-import { Suspense, useState } from "react";
+import {  useState } from "react";
 import { fetchCityWeather } from "./api/fetchApi";
 import "./App.css";
-import Loading from "./components/renderLoader";
+
 
 function App() {
   const [city, setCity] = useState("");

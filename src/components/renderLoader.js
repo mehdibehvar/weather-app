@@ -1,19 +1,21 @@
-// import loaderStyle from "./renderLoader.module.scss";
+import { MoonLoader } from "react-spinners";
+
+const override = {
+  display: "block",
+  margin: "0 auto",
+  borderColor: "black",
+};
 export default function Loading() {
     return (
-    //   <div className={loaderStyle.loader}>
-    //    <div className="center">
-    //    <div className="item  item-1"></div>
-    //     <div className="item item-2"></div>
-    //     <div className="item item-3"></div>
-    //     <div className="item item-4"></div>
-    //     <div className="item item-5"></div>
-    //     <div className="item item-6"></div>
-    //     <div className="item item-7"></div>
-    //     <div className="item item-8"></div>
-    //    </div>
-     
-    //   </div>
-    <h1>Loading............</h1>
-    )
+      <div className="sweet-loading">
+        <MoonLoader
+          color={"red"}
+          loading={true}
+          cssOverride={override}
+          size={200}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+        />
+      </div>
+    );
   }
