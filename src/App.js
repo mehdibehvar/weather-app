@@ -3,7 +3,6 @@ import {  useState } from "react";
 import { fetchCityWeather } from "./api/fetchApi";
 import "./App.css";
 import Loading from "./components/renderLoader";
-import Loading from "./components/renderLoader";
 function App() {
   const [city, setCity] = useState("");
   const [cityWeather, setCityWeather] = useState(null);
@@ -11,7 +10,6 @@ function App() {
   const [notFoundCity, setNotFoundCity] = useState(false);
 const [warning, setWarning] = useState("");
 const [loading, setLoading] = useState(false);;
-const [loading, setLoading] = useState(false);
   const getAndSetData=async ()=>{
 if (!city) {
 setWarning("نام شهر را وارد کن");
@@ -67,7 +65,7 @@ setCityData(null);
         </div>:<>
     
             <div className="city">
-       {loading?<Loading/>:<>{cityData && <div>
+       {loading?<Loading size={100}/>:<>{cityData && <div>
        <>
        <h2 className="city-name">
        <span>{cityData.name}</span>
