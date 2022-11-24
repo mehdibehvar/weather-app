@@ -5,7 +5,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 const App=lazy(()=>import("./App"))
 root.render(
   <React.StrictMode>
-    <Suspense fallback={Loading()}>
+    <Suspense fallback={Loading({size:200})}>
     <App />
     </Suspense>
   </React.StrictMode>
