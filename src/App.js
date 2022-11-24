@@ -3,18 +3,21 @@ import {  useState } from "react";
 import { fetchCityWeather } from "./api/fetchApi";
 import "./App.css";
 import Loading from "./components/renderLoader";
+import Loading from "./components/renderLoader";
 function App() {
   const [city, setCity] = useState("");
   const [cityWeather, setCityWeather] = useState(null);
   const [cityData, setCityData] = useState(null);
   const [notFoundCity, setNotFoundCity] = useState(false);
 const [warning, setWarning] = useState("");
+const [loading, setLoading] = useState(false);;
 const [loading, setLoading] = useState(false);
   const getAndSetData=async ()=>{
 if (!city) {
 setWarning("نام شهر را وارد کن");
 setCityData(null); 
 }else{
+  setLoading(true);
   setLoading(true);
   const data = await fetchCityWeather(city);
   if (data.cod==="404" || data===undefined||!data) {
@@ -27,6 +30,7 @@ setCityData(null);
   }
   setCity("");
   setWarning("");
+  setLoading(false);
   setLoading(false);
 }
 
@@ -63,7 +67,7 @@ setCityData(null);
         </div>:<>
     
             <div className="city">
-       {loading?<Loading size={100}/>:<>{cityData && <div>
+       {loading?<Loading/>:<>{cityData && <div>
        <>
        <h2 className="city-name">
        <span>{cityData.name}</span>
