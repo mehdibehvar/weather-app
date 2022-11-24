@@ -14,7 +14,8 @@ setWarning("نام شهر را وارد کن");
 setCityData(null); 
 }else{
   const data = await fetchCityWeather(city);
-  if (data.cod==="404") {
+  if (data.cod==="404" || data===undefined||data==={}) {
+    console.log("داده وجود ندتره");
     setNotFoundCity(true)
   }else{
     setCityData(data);    
@@ -36,8 +37,8 @@ setCityData(null);
   }
   return (
     <div className="main-container">
-<div className="search_Wrapper">
-<h1 className="title">beh-var-weather-app</h1>
+   <div className="search_Wrapper">
+      <h1 className="title">beh-var-weather-app</h1>
         <input
         className="search"
         placeholder="نام شهر..."
@@ -60,10 +61,10 @@ setCityData(null);
             <div className="city">
            <h2 className="city-name">
              <span>{cityData.name}</span>
-             <sup>{cityData.sys.country}</sup>
+             <sup>{cityData?.sys?.country}</sup>
            </h2>
            <div className="city-temp">
-             {Math.round(cityData.main.temp)}
+             {Math.round(cityData.main?.temp)}
              <sup>&deg;C</sup>
            </div>
            <div className="info">

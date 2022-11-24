@@ -1,7 +1,6 @@
 @font-face {
-  font-family: Rubik;
-  src: url("../public/assets/fonts/Rubik_Microbe/RubikMicrobe-Regular.ttf") format("ttf");
-  font-style: normal;
+  font-family: "Rubik";
+  src: url("../public/assets/fonts/Rubik_Microbe/RubikMicrobe-Regular.ttf");
 }
 
 html, body, #root {
@@ -27,12 +26,12 @@ html, body, #root {
 }
 .title{
   color:deeppink;
-  font-family: Rubik;
+  font-family: "Rubik";
   font-weight: 200;
 }
 .warning{
   color:rgb(255, 20, 20);
-  font-family: Rubik;
+  font-family: "Rubik";
   font-weight: 200;
 }
 .search_Wrapper{
