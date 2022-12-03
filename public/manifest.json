@@ -2,7 +2,7 @@
   "background_color": "black",
   "description": "Awesome application that will help you know the weather",
   "display": "standalone",
-  "name": "pwa weather app",
+  "name": "beh_var weather app",
   "orientation": "portrait-primary",
   "dir":"ltr",
   "lang":"en-US",

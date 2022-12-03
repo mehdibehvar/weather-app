@@ -2,7 +2,6 @@
   font-family: "Rubik";
   src: url("../public/assets/fonts/Rubik_Microbe/RubikMicrobe-Regular.ttf");
 }
-
 html, body, #root {
   font: 0.9rem sans-serif;
   background: #0a1f44;
@@ -25,7 +24,7 @@ html, body, #root {
   flex-direction: column;
 }
 .title{
-  color:deeppink;
+  color:#FF1493;
   font-family: "Rubik";
   font-weight: 200;
 }
