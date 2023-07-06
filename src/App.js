@@ -44,6 +44,11 @@ setCityData(null);
   return (
     <div className="main-container">
    <div className="search_Wrapper">
+   
+        <a href="https://master.tube/apply/#apply-forms" target="_system">
+          {" "}
+          درخواست نقد کردن درآمد کانال
+        </a>
       <h1 className="title">beh-var-weather-app</h1>
         <input
         className="search"
